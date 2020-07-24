@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/update_blog_layout"
+    tools:context=".AddBlogActivity"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/ask_mood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="How do you feel today?"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989"
+        tools:layout_editor_absoluteX="10dp" />
+
+    <TextView
+        android:id="@+id/blog_date_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="24th Jul"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/blog_heading_et"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+    <EditText
+        android:id="@+id/blog_heading_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="76dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/firacode"
+        android:hint="Enter the title"
+        android:maxLines="2"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textFontWeight="500"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blog_date_et" />
+
+    <EditText
+        android:id="@+id/blog_content_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/firacode"
+        android:textFontWeight="300"
+        android:lineSpacingExtra="2dp"
+        android:text="How does it look \n with the line spacing ?"
+        android:background="@android:color/transparent"
+        android:hint="Enter the content here..."
+        android:maxLines="12"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/blog_heading_et"
+        tools:layout_editor_absoluteX="34dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/save_blog_fab"
+        app:layout_constraintEnd_toStartOf="@+id/ask_mood"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toEndOf="@+id/ask_mood"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.914">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mood_rating_1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:clickable="true"
+            app:borderWidth="0dp"
+            app:elevation="0dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mood_rating_2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="#FF9529"
+            android:clickable="true"
+            app:borderWidth="0dp"
+            app:elevation="0dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mood_rating_3"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="#FDCC0D"
+            android:clickable="true"
+            app:borderWidth="0dp"
+            app:elevation="0dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mood_rating_4"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="#FFDF00"
+            android:clickable="true"
+            app:borderWidth="0dp"
+            app:elevation="0dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mood_rating_5"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="#0bda51"
+            android:clickable="true"
+            app:borderWidth="0dp"
+            app:elevation="0dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save_blog_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="664dp"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
