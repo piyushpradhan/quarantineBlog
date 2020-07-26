@@ -49,7 +49,7 @@ class AddBlogFragment : Fragment() {
             date,
             mood = Color.parseColor("#000000")
         )
-        if(blog_heading_et.text != null && blog_content_et.text != null) {
+        if(blog_heading_et.text.toString().trim() != "" && blog_content_et.text.toString().trim() != "") {
             mBlogViewModel.addBlog(blogModel = blog)
 
             blog_heading_et.text = null

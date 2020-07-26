@@ -1,86 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/update_blog_layout"
-    tools:context=".MainActivity"
-    android:background="#FFFFFF">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.StatsFragment">
 
     <TextView
-        android:id="@+id/ask_mood"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:gravity="center"
-        android:text="How do you feel today?"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.989"
-        tools:layout_editor_absoluteX="10dp" />
-
-    <TextView
-        android:id="@+id/blog_date_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="24th Jul"
-        android:layout_marginTop="50dp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/blog_heading_et"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
-
-
-    <EditText
-        android:id="@+id/blog_heading_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="76dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/firacode"
-        android:hint="Enter the title"
-        android:maxLines="2"
-        android:padding="5dp"
-        android:textAlignment="center"
-        android:textFontWeight="500"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/blog_date_et" />
-
-    <EditText
-        android:id="@+id/blog_content_et"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="28dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/firacode"
-        android:hint="Enter the content here..."
-        android:lineSpacingExtra="2dp"
-        android:maxLines="12"
-        android:padding="5dp"
-        android:text="How does it look \n with the line spacing ?"
-        android:textAlignment="center"
+        android:text="Share"
+        android:textSize="35dp"
         android:textColor="#000000"
-        android:textFontWeight="300"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/blog_heading_et"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="25dp" />
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:textFontWeight="600"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:layout_marginHorizontal="20dp"
+        android:text="Why do you feel miserable today?"/>
+
+    <EditText
+        android:id="@+id/share_why"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:gravity="top"
+        android:lineSpacingExtra="2dp"
+        android:layout_marginTop="110dp"
+        android:hint="What's bothering you?"
+        android:background="@drawable/share"
+        android:layout_marginHorizontal="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:layout_marginHorizontal="20dp"
+        android:text="How did you respond?"/>
+
+    <EditText
+        android:id="@+id/share_what_did_you_do"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:lineSpacingExtra="2dp"
+        android:padding="10dp"
+        android:gravity="top"
+        android:layout_marginTop="360dp"
+        android:hint="Okay, what did you do then?"
+        android:background="@drawable/share"
+        android:layout_marginHorizontal="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="480dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:layout_marginHorizontal="20dp"
+        android:text="What could you have done?"/>
+
+    <EditText
+        android:id="@+id/share_fix_should"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="10dp"
+        android:gravity="top"
+        android:layout_marginTop="510dp"
+        android:hint="Did you try to fix it or could you have done anything ?"
+        android:lineSpacingExtra="2dp"
+        android:background="@drawable/share"
+        android:layout_marginHorizontal="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Feeling better?"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginBottom="110dp"/>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="70dp"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:gravity="center"
+        android:layout_gravity="bottom"
         app:layout_constraintBottom_toTopOf="@+id/save_blog_fab"
         app:layout_constraintEnd_toStartOf="@+id/ask_mood"
         app:layout_constraintHorizontal_bias="0.511"
@@ -141,14 +158,15 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/save_blog_fab"
+        android:id="@+id/go_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="664dp"
-        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="bottom|center"
+        android:layout_marginVertical="15dp"
+        app:fabCustomSize="45dp"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_save_alt_24"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

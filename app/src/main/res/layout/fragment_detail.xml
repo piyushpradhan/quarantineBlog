@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/update_blog_layout"
-    tools:context=".AddBlogActivity"
+    tools:context=".MainActivity"
     android:background="#FFFFFF">
 
     <TextView
@@ -57,19 +57,20 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="28dp"
-        android:fontFamily="@font/firacode"
-        android:textFontWeight="300"
-        android:lineSpacingExtra="2dp"
-        android:text="How does it look \n with the line spacing ?"
         android:background="@android:color/transparent"
+        android:fontFamily="@font/firacode"
         android:hint="Enter the content here..."
+        android:lineSpacingExtra="2dp"
         android:maxLines="12"
         android:padding="5dp"
         android:textAlignment="center"
         android:textColor="#000000"
+        android:textFontWeight="300"
         android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/blog_heading_et"
-        tools:layout_editor_absoluteX="34dp" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="25dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -147,6 +148,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

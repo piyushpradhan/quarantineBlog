@@ -121,12 +121,31 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/blogs_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="542dp"
+        android:layout_height="480dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/stats_fragment_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/black"
+        android:src="@drawable/ic_outline_insert_chart_outlined_24"
+        app:borderWidth="0dp"
+        app:fabCustomSize="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.978" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

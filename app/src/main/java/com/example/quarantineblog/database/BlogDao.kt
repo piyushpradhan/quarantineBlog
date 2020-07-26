@@ -10,7 +10,7 @@ abstract interface BlogDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addBlog(blogModel: BlogModel)
 
-    @Query("SELECT * FROM blog_table")
+    @Query("SELECT * FROM blog_table ORDER BY date DESC")
     fun readAllData(): LiveData<List<BlogModel>>
 
     @Delete

@@ -5,12 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.quarantineblog.fragments.HomeFragmentDirections
 import com.example.quarantineblog.models.BlogModel
-import kotlinx.android.synthetic.main.fragment_detail.view.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.single_blog_item.view.*
 
 class BlogAdapter: RecyclerView.Adapter<BlogAdapter.ViewHolder>() {

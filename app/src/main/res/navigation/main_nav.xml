@@ -14,7 +14,24 @@
             app:destination="@id/addBlogFragment" />
         <action
             android:id="@+id/action_homeFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/add_blog_transition_entry"
+            app:exitAnim="@anim/add_blog_transition_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_statsFragment"
+            app:destination="@id/statsFragment"
+            app:enterAnim="@anim/add_blog_transition_entry"
+            app:exitAnim="@anim/add_blog_transition_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment2"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/add_blog_transition_entry"
+            app:exitAnim="@anim/add_blog_transition_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_statsFragment2"
+            app:destination="@id/statsFragment"
+            app:enterAnim="@anim/add_blog_transition_entry"
+            app:exitAnim="@anim/add_blog_transition_exit" />
     </fragment>
     <fragment
         android:id="@+id/addBlogFragment"
@@ -31,9 +48,25 @@
         android:label="Blog Details" >
         <action
             android:id="@+id/action_detailFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/add_blog_transition_entry"
+            app:exitAnim="@anim/add_blog_transition_exit" />
         <argument
             android:name="currentBlog"
+            app:argType="com.example.quarantineblog.models.BlogModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/statsFragment"
+        android:name="com.example.quarantineblog.fragments.StatsFragment"
+        android:label="fragment_stats"
+        tools:layout="@layout/fragment_stats" >
+        <action
+            android:id="@+id/action_statsFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/add_blog_transition_entry"
+            app:exitAnim="@anim/add_blog_transition_exit" />
+        <argument
+            android:name="newBlog"
             app:argType="com.example.quarantineblog.models.BlogModel" />
     </fragment>
 </navigation>

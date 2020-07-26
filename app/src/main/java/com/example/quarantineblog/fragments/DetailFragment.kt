@@ -97,6 +97,10 @@ class DetailFragment : Fragment() {
         val title = blog_heading_et.text.toString()
         val content = blog_content_et.text.toString()
 
+        if(mood == null) {
+            mood = args.currentBlog.mood
+        }
+
         if(inputCheck(title, content)) {
             val updatedBlog = BlogModel(args.currentBlog.id, title.toString(), content.toString(), args.currentBlog.date, Integer.parseInt(mood.toString()))
             blogViewModel.updateBlog(blogModel = updatedBlog)

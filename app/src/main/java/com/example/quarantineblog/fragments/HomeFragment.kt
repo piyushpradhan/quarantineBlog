@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.quarantineblog.BlogAdapter
@@ -49,6 +50,8 @@ class HomeFragment : Fragment() {
         val mood_rating_3 = view.findViewById<FloatingActionButton>(R.id.mood_rating_3)
         val mood_rating_4 = view.findViewById<FloatingActionButton>(R.id.mood_rating_4)
         val mood_rating_5 = view.findViewById<FloatingActionButton>(R.id.mood_rating_5)
+
+        val nav_to_stats_fab = view.findViewById<FloatingActionButton>(R.id.stats_fragment_fab)
 
         add_blog_background = view.findViewById<CardView>(R.id.cardView)
 
@@ -100,6 +103,10 @@ class HomeFragment : Fragment() {
             addBlog()
         }
 
+        nav_to_stats_fab.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_statsFragment)
+        }
+
         return view
     }
 
@@ -111,6 +118,10 @@ class HomeFragment : Fragment() {
         val dateformat = SimpleDateFormat("dd\nMMM")
         val date = dateformat.format(Date())
 
+        if(mood == null) {
+            mood = Color.parseColor("#000000")
+        }
+
         val blog = BlogModel(
             0,
             main_title_et.text.toString(),
@@ -121,8 +132,13 @@ class HomeFragment : Fragment() {
 
         if(main_title_et.text.toString() != "" && main_content_et.text.toString() != "") {
             mBlogViewModel.addBlog(blog)
-            main_title_et.text = null
-            main_content_et.text = null
+            main_title_et.text.clear()
+            main_content_et.text.clear()
+
+            if(mood == Color.parseColor("#ff0000") || mood == Color.parseColor("#FF9529")) {
+                val action = HomeFragmentDirections.actionHomeFragmentToStatsFragment(blog)
+                findNavController().navigate(action)
+            }
 
             Toast.makeText(requireContext(), "Blog added successfully", Toast.LENGTH_SHORT).show()
 
@@ -131,7 +147,7 @@ class HomeFragment : Fragment() {
         }
         mood = Color.parseColor("#000000")
         add_blog_background.setCardBackgroundColor(Color.parseColor("#ffffff"))
-        main_title_et.setTextColor(Integer.parseInt("000000"))
-        main_content_et.setTextColor(Integer.parseInt("000000"))
+        main_title_et.setTextColor(Color.parseColor("#000000"))
+        main_content_et.setTextColor(Color.parseColor("#000000"))
     }
 }

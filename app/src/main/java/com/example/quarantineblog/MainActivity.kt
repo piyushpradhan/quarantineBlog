@@ -17,12 +17,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setupActionBarWithNavController(findNavController(R.id.fragment))
-
-    }
-
-    override fun finish() {
-        super.finish()
-        overridePendingTransition(R.anim.add_blog_transition_entry, R.anim.add_blog_transition_exit)
     }
 }
